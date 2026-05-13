@@ -3,38 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!-- displays site properly based on user's device -->
-
     <link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <title>Frontend Mentor | Room homepage</title>
+    <link href="css/main.css" rel="stylesheet">
+    <script defer src="slider.js"></script>
 
 </head>
 <body>
 <main>
     <section class="hero">
         <header class="hero__header">
-            <nav >
-                <ul>
+            <nav>
+                <button class="hero__header__hamburger__menu"><img alt="Hamburger Menu"
+                                                                   src="./images/icon-hamburger.svg"></button>
+                <img alt="Room Logo" class="hero__header__logo" src="./images/logo.svg">
+                <ul hidden>
                     <li>Home</li>
                     <li>Shop</li>
                     <li>About</li>
                     <li>Contact</li>
                 </ul>
-                <button><img alt="Hamburger Menu" src="./images/icon-hamburger.svg"></button>
             </nav>
-            <img alt="Room Logo" src="./images/logo.svg">
             <div class="hero__header__buttons">
-            <button>
-                <img alt="Left arrow" src="./images/icon-angle-left.svg">
-            </button>
-            <button>
-                <img alt="Left arrow" src="./images/icon-angle-right.svg">
-            </button>
+                <button>
+                    <img alt="Left arrow" id="leftArrow" src="./images/icon-angle-left.svg">
+                </button>
+                <button>
+                    <img alt="Right arrow" id="rightArrow" src="./images/icon-angle-right.svg">
+                </button>
             </div>
         </header>
-        <article class="hero__slide">
-            <img alt="Room Homepage Image" class="hero__slide__image" src="./images/mobile-image-hero-1.jpg">
+        <article class="hero__slide slider">
+            <picture class="hero__slide__image">
+                <source media="(min-width: 768px)" srcset="./images/desktop-image-hero-1.jpg">
+                <img alt="Room Homepage Image" src="./images/mobile-image-hero-1.jpg">
+            </picture>
             <div class="hero__slide__content">
                 <h1>
                     Discover innovative ways to decorate
@@ -44,16 +50,19 @@
                     Our experts combine form and function in bringing your vision to life. Create a room in your
                     own style with our collection and make your property a reflection of you and what you love.
                 </p>
+                <a class="hero__slide__content__button">
+                    <p>
+                        Shop now
+                    </p>
+                    <img alt="Shop Now Button" src="./images/icon-arrow.svg">
+                </a>
             </div>
-            <a>
-                <p>
-                    Shop now
-                </p>
-                <img alt="Shop Now Button" src="./images/icon-arrow.svg">
-            </a>
         </article>
-        <article class="hero__slide">
-            <img alt="Room Homepage Image" class="hero__slide__image" src="./images/mobile-image-hero-2.jpg">
+        <article class="hero__slide-inactive slider">
+            <picture class="hero__slide__image">
+                <source media="(min-width: 768px)" srcset="./images/desktop-image-hero-2.jpg">
+                <img alt="Room Homepage Image" class="hero__slide__image" src="./images/mobile-image-hero-2.jpg">
+            </picture>
             <div class="hero__slide__content">
                 <h1>
                     We are available all across the globe
@@ -72,8 +81,11 @@
                 <img alt="Shop Now Button" src="./images/icon-arrow.svg">
             </a>
         </article>
-        <article class="hero__slide">
-            <img alt="Homepage Image" class="hero__slide__image" src="./images/mobile-image-hero-3.jpg">
+        <article class="hero__slide-inactive slider">
+            <picture class="hero__slide__image">
+                <source media="(min-width: 768px)" srcset="./images/desktop-image-hero-3.jpg">
+                <img alt="Homepage Image" class="hero__slide__image" src="./images/mobile-image-hero-3.jpg">
+            </picture>
             <div class="hero__slide__content">
                 <h1>
                     Manufactured with the best materials
@@ -94,7 +106,7 @@
         </article>
     </section>
     <section class="about">
-        <img alt="Article image" src="./images/image-about-dark.jpg" class="about-upper-image">
+        <img alt="Article image" class="about-upper-image" src="./images/image-about-dark.jpg">
         <div class="about-content">
             <h4>
                 About our furniture
@@ -106,7 +118,7 @@
                 or anything in between. Product specialists are available to help you create your dream space.
             </p>
         </div>
-        <img alt="Article image" src="./images/image-about-light.jpg" class="about-lower-image">
+        <img alt="Article image" class="about-lower-image" src="./images/image-about-light.jpg">
     </section>
 </main>
 </body>
